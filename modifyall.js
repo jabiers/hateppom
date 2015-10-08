@@ -16,6 +16,11 @@ function httpGetAsync(theUrl, method, callback)
 var isStart = false;
 var paramList = [];
 function modifyallitem(replace) {
+    if (replace == 'text') {
+        alert('text 를 바꿔주세요.');
+        return;
+    }
+    
     var url = 'http://www.ppomppu.co.kr/myinfo/member_my_write_list.php?page='+page;
     var self = this;
     httpGetAsync(url, "GET", function (responseText) {
@@ -103,3 +108,4 @@ function ppomppumodify(replace) {
 }
 
 
+modifyallitem('text')

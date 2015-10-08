@@ -80,7 +80,26 @@ function ppomppumodify(replace) {
 function ppomppumodify(replace) {
     var param = paramList.pop();
 
-    if (param.indexOf("market_phone") > -1) {
+    if (param.indexOf("id=market_phone&") > -1
+    || param.indexOf("id=market&") > -1
+    || param.indexOf("id=cmarket&") > -1
+    || param.indexOf("id=onmarket&") > -1
+    || param.indexOf("id=market_social&") > -1
+    || param.indexOf("id=market_oversea&") > -1
+    || param.indexOf("id=market_item&") > -1
+    || param.indexOf("id=market_talent&") > -1
+    || param.indexOf("id=market_bike&") > -1
+    || param.indexOf("id=market_ecig&") > -1
+    || param.indexOf("id=market_car&") > -1
+    || param.indexOf("id=market_camping&") > -1
+    || param.indexOf("id=gonggu&") > -1
+    || param.indexOf("id=gonggu_request&") > -1
+    || param.indexOf("id=market_agent&") > -1
+    || param.indexOf("id=guin&") > -1
+    || param.indexOf("id=market_story&") > -1
+    || param.indexOf("id=relay&") > -1
+    || param.indexOf("id=love&") > -1
+    || param.indexOf("id=stock&") > -1) {
       return;
     }
     var url = 'http://www.ppomppu.co.kr/zboard/write.php?' + param + '&mode=modify';
